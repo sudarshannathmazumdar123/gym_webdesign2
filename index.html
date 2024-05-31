@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gym website template</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+*
+{
+margin:0;
+padding:0;
+font-family: 'Comfortaa', cursive;
+}
+.container-fluid
+{
+width: 100%;
+background:#111;
+color: #fff;
+}
+.navbar
+{
+width: 1200px;
+height: 80px;
+margin:auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.navbar ul
+{
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
+}
+.navbar ul li
+{
+margin-right: 25px;
+font-size: 14px;
+cursor: pointer;
+font-weight: bold;
+transition: .5s;
+}
+.navbar ul li:hover
+{
+color: #e33;
+}
+.navbar .btn
+{
+width: 140px;
+height: 45px;
+background: #e33;
+border-radius: 25px;
+border:2px solid #e33;
+font-weight: bold;
+cursor: pointer;
+transition: .5s;
+color: #fff;
+}
+.navbar .btn:hover
+{
+background:#e11;
+}
+.content
+{
+width: 1200px;
+margin:auto;
+display: flex;
+}
+.content h3
+{
+padding-top: 150px;
+font-size: 20px;
+}
+.content h1
+{
+font-size: 70px;
+font-weight: bold;
+padding-top: 20px;
+}
+.content span
+{
+color: #e33;
+}
+.content h4
+{
+font-size: 20px;
+padding-top: 20px;
+}
+.content input
+{
+margin-top: 50px;
+width: 400px;
+height: 45px;
+border-radius: 25px;
+background:transparent;
+border:2px solid #fff;
+font-size: 16px;
+outline: none;
+padding:23px;
+}
+.content input::placeholder
+{
+color: #fff;
+}
+.content button
+{
+width: 140px;
+height: 45px;
+border-radius: 25px;
+background-color: #e33;
+cursor: pointer;
+font-size: 15px;
+position: relative;
+left: -148px;
+border:2px solid #e33;
+transition: .5s;
+color: #fff;
+}
+.content button:hover
+{
+background:#e11;
+}
+.content img
+{
+margin-left: 200px;
+width: 400px;
+}
+.about
+{
+width: 100%;
+background: #222;
+}
+.about .cont
+{
+width: 1200px;
+margin:auto;
+display: flex;
+padding-top: 50px;
+}
+.cont img
+{
+width: 500px;
+margin-top: 100px;
+}
+.cont h1
+{
+color: #fff;
+padding-top: 80px;
+font-weight: bold;
+font-size: 40px;
+padding-left: 100px;
+}
+.cont h3
+{
+font-weight: bold;
+color: #fff;
+padding-top: 10px;
+font-size: 15px;
+padding-left: 100px;
+}
+.cont p
+{
+padding-left: 100px;
+color: #999;
+line-height: 25px;
+padding-top: 30px;
+}
+.cont button
+{
+width: 140px;
+height: 45px;
+border-radius: 25px;
+background-color: #e33;
+cursor: pointer;
+font-size: 15px;
+border:2px solid #e33;
+transition: .5s;
+color: #fff;
+margin-left: 100px;
+margin-top: 30px;
+}
+.cont button:hover
+{
+background-color: #e11;
+}
+.service
+{
+width: 100%;
+background: #111;
+padding: 50px 0px;
+}
+.service .text
+{
+width: 1200px;
+margin:auto;
+padding:25px 0px;
+}
+.service .text h1
+{
+color: #fff;
+font-weight: bold;
+font-size: 40px;
+text-align: center;
+}
+.service .box
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 50px;
+}
+.service .box div
+{
+width: 350px;
+background:#fff;
+border-radius: 10px;
+text-align: center;
+padding:20px 10px;
+}
+.service .box div ion-icon
+{
+color: #e33;
+font-size: 50px;
+padding-top: 20px;
+}
+.service .box div h2
+{
+font-weight: bold;
+cursor: pointer;
+padding-top: 20px;
+}
+.service .box div p
+{
+color: #111;
+line-height: 25px;
+padding:30px;
+font-weight: bold;
+font-family: arial;
+}
+.pricing
+{
+width: 100%;
+background-color: #222;
+}
+.price
+{
+width: 1200px;
+margin:auto;
+padding:50px 0px;
+height: 600px;
+}
+.price h1
+{
+text-align: center;
+color: #fff;
+}
+.price p
+{
+color: #fff;
+font-size: 15px;
+padding-top: 20px;
+text-align: center;
+}
+.pricing .price-box
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.pricing .price-box div
+{
+width: 300px;
+padding:25px;
+background-color: #fff;
+border-radius: 10px;
+text-align: center;
+margin-top: 100px;
+cursor: pointer;
+transition: .5s;
+}
+.pricing .price-box div:hover
+{
+margin-top: 70px;
+}
+.pricing .price-box div h2
+{
+font-size: 30px;
+}
+.pricing .price-box div h3
+{
+font-size: 60px;
+color: #e33;
+padding-top: 20px;
+}
+.pricing .price-box div h5
+{
+font-weight: bold;
+font-size: 15px;
+padding-top: 20px;
+}
+.pricing .price-box div .btn
+{
+width: 140px;
+height: 45px;
+background-color: #e33;
+border-radius: 25px;
+border:2px solid #e33;
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+margin-top: 20px;
+transition: .5s;
+}
+.pricing .price-box div .btn:hover
+{
+background-color: #e11;
+}
+.footer-fluid
+{
+width: 100%;
+background-color: #111;
+}
+.footer
+{
+width: 1200px;
+margin: auto;
+padding:50px;
+display: flex;
+box-sizing: border-box;
+justify-content: space-between;
+align-items: center;
+}
+.footer p
+{
+color: #fff;
+}
+.footer a
+{
+text-decoration: none;
+color: #e33;
+}
+.footer ion-icon
+{
+color: #fff;
+font-size: 25px;
+margin-right: 10px;
+cursor: pointer;
+transition: .5s;
+}
+.footer ion-icon:hover
+{
+color: #e33;
+}
+
+
+
+
+
+</style>
+
+
+<body>
+<div class="container-fluid">
+<div class="navbar">
+<h1>Sudarshan Fitness</h1>
+<ul>
+       
+<a href="firstpage.html">About Us</a>
+
+
+<a href="secondpage.html">Create Account</a>
+
+<a href="thirdpage.html">🌐LOGIN</a>
+
+</ul>
+
+</div>
+<div class="content">
+<div>
+<h3>Hello, My Name Is</h3>
+<h1>Sudarshan<span> Nath</span></h1>
+<h4>I'm Gym Trainer</h4>
+<input type="search" name="" placeholder="search">
+<button>Search</button>
+</div>
+<div class="img">
+<img src="a.png">
+</div>
+</div>
+</div>
+<div class="about">
+<div class="cont">
+<div>
+<img src="b.png">
+</div>
+<div>
+<h1>About Me</h1>
+<h3>Gym Trainer</h3>
+<h1>GROUP TRANINIG</h1>
+        <h1>AN EVOLUTION OF GROUP TRAINING</h1>
+        <h1>With the arrival of Sudarshan Gyms comes a group training timetable that rebels against convention. Our unique range of instructor-led classes can only be found at Sudarshan Gyms and are designed for all fitness levels, challenging and elevating our members from CONTENDERS to CHAMPIONS.</h1>
+
+</div>
+</div>
+</div>
+<div class="service">
+<div class="text">
+<h1>Our Service</h1>
+<div class="box">
+<div>
+<ion-icon name="person"></ion-icon>
+<h2>Sports Training</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+</div>
+<div>
+<ion-icon name="bicycle"></ion-icon>
+<h2>Bicycle Training</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+</div>
+<div>
+<ion-icon name="tennisball"></ion-icon>
+<h2>Games Training</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pricing">
+<div class="price">
+<h1>Pricing</h1>
+<p><p>Your personal information is personal property and as such we have published a separate Privacy Policy on these web pages. Our omission to exercise any rights under these conditions of use does not constitute a waiver or such right unless expressly accepted by us in writing.</p></p>
+
+<div class="price-box">
+<div>
+<h2>Basic</h2>
+<h3>Rs 2100</h3>
+<h5>1 Month Training</h5>
+<button class="btn" onclick="location.href='secondpage.html'">Buy Now</button>
+
+</div>
+<div>
+<h2>Standard</h2>
+<h3>Rs3500</h3>
+<h5>3 Month Training</h5>
+<button class="btn" onclick="location.href='secondpage.html'">Buy Now</button>
+</div>
+<div>
+<h2>Premium</h2>
+<h3>Rs5500</h3>
+<h5>6 Month Training</h5>
+<button class="btn" onclick="location.href='secondpage.html'">Buy Now</button>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-fluid">
+<div class="footer">
+<p>Copyright 2022 - All Right Reserved - Made By <a href="#">SudarshanNtz</a></p>
+<div class="icon">
+<a href="https://www.facebook.com/sudarshan.nathmazumdar?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon>
+<a href="https://chat.whatsapp.com/JtolSsT55RwJplcyQV1hpZ"><ion-icon name="logo-whatsapp"></ion-icon>
+<a href="https://github.com/sudarshannathmazumdar123"><ion-icon name="logo-github"></ion-icon>
+
+</div>
+</div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
